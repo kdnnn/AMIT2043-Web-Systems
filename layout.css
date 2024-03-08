@@ -6,12 +6,24 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     background-color: #f5f5dd ;
+    background-image: url(cars2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#h1 {
+    font-family: 'Noto Serif Display', sans-serif;
+    display: block;
+    text-align: center;
 }
 
 header {
+    z-index: 1;
     margin: 0;
     overflow: hidden;
-    background-color: #0b1622;
+    background-color: #000000;
+    opacity: 90%;
+    padding: 0px 0px 0px 0px;
 }
 
 .header-right {
@@ -24,6 +36,7 @@ header {
 }
 
 .login{
+    z-index: 3;
     padding: 3px 40px;
     border-radius: 100px;
     background-color: #4f009e;
@@ -35,12 +48,88 @@ header {
 }
 
 .login:hover {
-    transition: .1s ease-in-out;
+    z-index: 3;
+    transition: .2s ease-in-out;
     background-image: url(cars.jpg);
     background-size: cover;
     background-position: 0px;
     background-repeat: no-repeat;
     color: #000000;
+}
+
+#login-menu {
+    display: block;
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+    top: -50%;
+    margin-top: 1px;
+    right: 0;
+}
+
+.login-popup {
+    border-color: #000000;
+    border-width: 0.2px;
+    border-style: ridge;
+    position: absolute;
+    margin-right: 1%;
+    width: 30%;
+    height: 35%;
+    display: block;
+    z-index: 1;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    transform: translate(0, 190%);
+    transition: .4s ease-in-out;
+    rotate: 8deg;
+}
+
+#login-menu-header {
+    display: block;
+    background-color: black;
+}
+
+#member-login {
+    color: #FFFFFF;
+    font-family: 'brush-script-std', sans-serif;
+    font-size: 35px;
+}
+
+#qr {
+    position: absolute;
+    width: 90px;
+    left: 10px;
+}
+
+#login-menu-button {
+    position: absolute;
+    right: 2%;
+    bottom: 3%;
+    padding: 5px 30px;
+    border-radius: 20px;
+    background-color: #f5f5dd;
+    color: #000000;
+    font-family: 'Noto Serif Display', sans-serif;
+    font-weight: 900;
+}
+
+#login-menu-button:hover {
+    background-color: #000000;
+    color: #f5f5dd;
+    transition: .2s ease;
+}
+
+#form {
+    font-family: 'Noto Serif Display', sans-serif;
+    font-size: 15px;
+    font-style: italic;
+    margin: -10px
+}
+
+#username, #password {
+    border-radius: 20px;
+    width: 220px;
+    padding: 3px 40px;
 }
 
 #logo {
@@ -49,7 +138,7 @@ header {
     display: block;
     text-align: center;
     margin: -12px;
-    font-family: "brush-script-std", sans-serif;
+    font-family: 'brush-script-std', sans-serif;
 }
 
 #logo:hover {
@@ -91,11 +180,6 @@ header {
     opacity: 50%;
     transform: translateY(4px);
 }
-  
-header {
-    background-color: #000000;
-    padding: 0px 0px 0px 0px;
-}
 
 .nav {
     transition: 0.3s ease;
@@ -108,7 +192,6 @@ header {
     padding: 0 20px;
     font-family: 'Noto Serif Display', sans-serif;
     font-weight: 200;
-
 }
   
 .nav li {

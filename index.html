@@ -6,16 +6,33 @@
     <head>  
         <link rel="stylesheet" href="layout.css">
         <script src="index.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
+      <div id="login-menu">
+        <div id="login-menu-header">
+          <h1 id="member-login">Member Login</h1>
+        </div>
+        <div id="login-menu-body">
+          <div id="form">
+            <h3>Username : <input type="form" id="username"></h3>
+            <h3>Password : <input type="form" id="password"></h3>
+          </div>
+        </div>
+        <div id="login-menu-footer">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Rickrolling_QR_code.png" id="qr">
+          <button id="login-menu-button" onclick="loginOnClick()">Login</button>
+      </div>
+      </div>
         <header>
             <div id="logo">
                 <h1>Midnight Car Club</h1>
             </div>
             <div class="header-right">
-                <button class="login">Login</button>
+                <button class="login" onclick="popupOnClick()">Login</button>
             </div>
         </header>
+      </div>
         <div id="menu">
             <div id="menu-bar" onclick="menuOnClick()">
               <div id="bar1" class="bar"></div>
@@ -33,5 +50,6 @@
             </nav> 
           </div>
         <div class="menu-bg" id="menu-bg"></div>
+        <h1 id="h1">Welcome to the Midnight Car Club.</h1>
     </body>
 </html>
