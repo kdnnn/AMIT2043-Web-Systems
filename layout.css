@@ -6,7 +6,6 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     background-color: #f5f5dd ;
-    background-image: url(cars2.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -35,7 +34,7 @@ header {
     align-items: center;
 }
 
-.login{
+.login {
     z-index: 3;
     padding: 3px 40px;
     border-radius: 100px;
@@ -95,10 +94,19 @@ header {
     font-size: 35px;
 }
 
-#qr {
-    position: absolute;
-    width: 90px;
-    left: 10px;
+#staff-login {
+    margin: 82px 320px 0 0;
+    font-weight: bold;
+    font-family: 'Noto Serif Display', sans-serif;
+}
+
+#staff-login > a {
+    color: red;
+    text-decoration: none;
+}
+
+#staff-login > a:hover {
+    color: #4f009e;
 }
 
 #login-menu-button {
