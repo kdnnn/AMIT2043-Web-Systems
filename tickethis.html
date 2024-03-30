@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Merchandise</title>
+    </header>
+    <head>  
+        <link rel="stylesheet" href="layout.css">
+        <link rel="stylesheet" href="tickethis.css">
+
+        <script src="index.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+      <div id="login-menu">
+        <div id="login-menu-header">
+          <h1 id="member-login">Member Login</h1>
+        </div>
+        <div id="login-menu-body">
+          <div id="form">
+            <h3>Username : <input type="form" id="username"></h3>
+            <h3>Password : <input type="form" id="password"></h3>
+          </div>
+        </div>
+        <div id="login-menu-footer">
+          <div id="staff-login"><a href="staff.html">Staff login</a></div>
+          <button id="login-menu-button" onclick="loginOnClick()">Login</button>
+      </div>
+      </div>
+        <header>
+            <div id="logo">
+                <h1>Midnight Car Club</h1>
+            </div>
+            <div class="header-right">
+                <button class="login" onclick="popupOnClick()">Login</button>
+            </div>
+        </header>
+      </div>
+        <div id="menu">
+            <div id="menu-bar" onclick="menuOnClick()">
+              <div id="bar1" class="bar"></div>
+              <div id="bar2" class="bar"></div>
+              <div id="bar3" class="bar"></div>
+            </div>
+            <nav class="nav" id="nav">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="merch.html">Merchandise</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="join.html">Join Us</a></li>
+              </ul>
+            </nav> 
+          </div>
+        <div class="menu-bg" id="menu-bg"></div>
+
+        <div class="order-history" style="overflow-x: auto;">
+          <div class="back-button"><a href="merch.html">Back</a></div>
+          <main>
+            <h2>Order History</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Event</th>
+                  <th>Order ID</th>
+                  <th>Date</th>
+                  <th>Quantity</th>
+                  <th>Total Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>event</td>
+                  <td>123456</td>
+                  <td>2023-04-01</td>
+                  <td>2</td>
+                  <td>RM100</td>
+                </tr>
+                <tr>
+                  <td>event</td>
+                  <td>123456</td>
+                  <td>2023-04-01</td>
+                  <td>2</td>
+                  <td>RM100</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </main>
+        </body>

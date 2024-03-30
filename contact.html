@@ -5,10 +5,12 @@
     </header>
     <head>  
         <link rel="stylesheet" href="layout.css">
+        <link rel="stylesheet" href="contact.css">
+
         <script src="index.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-    <body>
+    <body style="background-image: url('cars3.png');">  
       <div id="login-menu">
         <div id="login-menu-header">
           <h1 id="member-login">Member Login</h1>
@@ -50,6 +52,65 @@
             </nav> 
           </div>
         <div class="menu-bg" id="menu-bg"></div>
-                <!--Add content here :)-->
+        <div class="contact">
+          <h2>Contact us</h2>
+          <h4>Drop us a line, or give us a heads up if you're interested in visiting us.</h4>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         
+
+          <div class="contact-container">
+            <div class="contact-box" id="emailus" data-hover="hover" data-hit="hit1" onclick="document.getElementById('id01').style.display='block'" style="width:50%;">
+                <p>Email Us</p>
+                <h5>For any other inquiries please email us</h5>
+            </div>
+
+            <div class="contact-box" id="call" data-hover="hover" data-hit="hit1" style="width:50%;">
+              <p>Call or Text Us</p>
+              <a href="https://web.whatsapp.com/" class="fa fa-whatsapp"> 018-6664227</a>
+          </div>
+
+             <div class="insta-box" id="insta" data-hover="hover" data-hit="hit1" style="width:50%;">
+              <p>Follow Midnight Car Club</p>
+              <a href="https://www.instagram.com/jjoeye_e/?hl=en" class="fa fa-instagram"> midnightcc</a>
+          </div>
+      </div>
+          
+          <div id="id01" class="question">
+            
+            <form class="question-content animate" action="/action_page.php" method="post">
+              <div class="imgemail">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close question">&times;</span>
+              </div>
+          
+              <div class="email">
+                <label for="uemail"><b>Email</b></label>
+                <input type="text" placeholder="Enter email" name="uemail" required>
+          
+                <label for="msg"><b>Question</b></label>
+                <input type="text" placeholder="Your Message" name="msg" required>
+                  
+                <button type="send">Send</button>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+              </div>
+          
+              <div class="cancel" >
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw"> <a href="#">login</a></span>
+              </div>
+            </form>
+          </div>
+
+          <script>
+
+          var question =document.getElementById('id01');
+          
+          window.onclick = function(event) {
+              if (event.target == question) {
+                  question.style.display = "none";
+              }
+          }
+      </script>
     </body>
 </html>

@@ -5,6 +5,8 @@
     </header>
     <head>  
         <link rel="stylesheet" href="layout.css">
+        <link rel="stylesheet" href="merch.css">
+
         <script src="index.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
@@ -50,6 +52,77 @@
             </nav> 
           </div>
         <div class="menu-bg" id="menu-bg"></div>
-                <!--Add content here :)-->
+
+
+        <div class="container">
+          <img src="cars6.png" class="background-image" alt="Background">
+          <div class="table-container">
+            <a href="tickethis.html" class="history-button">My Ticket History</a></div>
+            </div>
+
+        <div id="ticket-purchase">
+          <h2>Buy Tickets</h2>
+          <form id="purchase-form">
+            <table>
+              <tr>
+                <th>Event</th>
+                <th>Date</th>
+                <th>Quantity</th>
+                <th>Price</th>
+              </tr>
+              <tr>
+                <td>
+                  <select id="ticket-type" name="ticket-type">
+                    <option value="autoshow">Autoshow 2024</option>
+                    <option value="midnight">Midnight Car Event</option>
+                    <option value="tokyo">Tokyo Auto Salon 2024</option>
+                    <option value="automex">Automex 2024</option>
+                    <option value="iam">International Automodified(IAM) Kuala Lumpur 2024</option>
+                    <option value="evm">EVM Asia 2024 Expo</option>
+
+                  </select>
+                </td>
+                <td>
+                  <input type="datetime-local" id="ticket-date" name="ticket-date" required>
+                </td>
+                <td>
+                  <input type="number" id="ticket-quantity" name="ticket-quantity" min="1" required>
+                </td>
+                <td id="price">RM 0</td>
+              </tr>
+            </table>
+            <input type="submit" value="Buy Now">
+          </form>
+        </div>
+        </div>
+        <div class="content">
+          <p>
+            This is a general entry ticket that entitles you to have full access to the event. Each ticket is RM20 unless you meet the criteria below. Your tickets are valid from 22nd - 26th MAY 2024 and can be redeemed at the ticketing counter during the MALAYSIA AUTOSHOW 2024 at MAEPS Serdang.
+           <p>If you wish to buy tickets in bulk, you can reach out to our help desk to get more information on the process.</p>
+
+           <p>Help Desk: +6012 345 6789</p>
+            
+          <p>IMPORTANT: MyKad/MyKid/OKU card or identification card must be presented at the ticket counter on the day of the event for age verification purposes to be entitled to a complimentary/free ticket. If a visitor fails to present their identification card, they will be required to purchase a full-rate entry ticket.</p>
+            
+          <p>Children aged 9 and below AND seniors above 60 years old can enter for free by providing their MyKad/MyKid at the Ticketing Counter. If they fail to present their MyKad/MyKid, we shall consider it as a full-rate entry ticket purchase.</p>
+            <p>Individuals with an OKU card must redeem their ticket at the venue and present their OKU card for verification to be entitled to a free ticket. If they fail to present their OKU card, we will consider it as a full-rate entry ticket purchase.</p>
+            <p>Students are entitled to a 50% discount when they purchase their tickets at the cash counter at the venue. Students must present their student ID to be allowed in. If they fail to do so, they must purchase a full-price ticket.</p>
+           <p>This ticket grants you access to the event on any of the scheduled days. However, please note that it is valid for a single entry only</p>
+        </div>
+
+        <script>
+          document.getElementById('purchase-form').addEventListener('input', function() {
+            var ticketType = document.getElementById('ticket-type').value;
+            var quantity = parseInt(document.getElementById('ticket-quantity').value, 10) || 0;
+            var pricePerTicket = ticketType === 'vip' ? 200 : 100;
+            var totalPrice = pricePerTicket * quantity;
+            document.getElementById('price').textContent = 'RM' + totalPrice;
+          
+            var bgColor = totalPrice > 1000 ? 'linear-gradient(to right, #ec9a30 , #e6ef85 )' : 'linear-gradient(to right,  #a889c9 0%, #ccc2d7  100%)';
+  document.getElementById('ticket-purchase').style.background = bgColor;
+  });
+  </script>
+
+          </script>
       </body>
 </html>
