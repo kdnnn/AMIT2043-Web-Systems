@@ -1,0 +1,92 @@
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.text-inside-image {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  font-family: "Georgia", sans-serif;
+}
+
+.centered-large-text {
+  text-align: center;
+  font-size: 30px;
+  font-family: "Aptos ExtraBold", sans-serif;
+  font-weight: 800;
+}
+
+body {
+  background-color: white;
+}
+
+.small-text-1 {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Aharoni", sans-serif;
+}
+
+.large-text {
+  font-size: 30px;
+}
+
+.small-text-2 {
+  font-size: 16px;
+  font-family: "DengXian Light", sans-serif;
+  color: grey;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  background-color: white;
+  padding: 10px 20px;
+  font-family: 'Noto Serif Display', sans-serif;
+  font-size: 100px;
+  font-weight: bold;
+  width: 1200px;
+  height: 130px;
+  color: aqua;
+}
+
+#button1 {
+  font-family: 'Lucida Sans', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+#button1:hover {
+  transform: translateY(-15px);
+  background-color: #4f009e;
+  transition: 0.3s ease-in-out
+}
+
+.button {
+  display: inline-block;
+  padding: 20px 30px;
+  font-size: 30px;
+  font-weight: 200;
+  font-family: "Georgia", serif;
+  text-align: center;
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: black;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgb(98, 0, 255);
+}
+
+.button:active {
+  background-color: rgb(98, 0, 255);
+}
+
