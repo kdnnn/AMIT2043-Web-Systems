@@ -1,116 +1,119 @@
 <!DOCTYPE html>
 <html>
-    <header>
-        <title>Contact Us</title>
-    </header>
-    <head>  
-        <link rel="stylesheet" href="layout.css">
-        <link rel="stylesheet" href="contact.css">
+<header>
+  <title>Contact Us</title>
+</header>
 
-        <script src="index.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body style="background-image: url('cars3.png');">  
-      <div id="login-menu">
-        <div id="login-menu-header">
-          <h1 id="member-login">Member Login</h1>
+<head>
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="contact.css">
+
+  <script src="index.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body style="background-image: url('cars3.png');">
+  <div id="login-menu">
+    <div id="login-menu-header">
+      <h1 id="member-login">Member Login</h1>
+    </div>
+    <div id="login-menu-body">
+      <div id="form">
+        <h3>Username : <input type="form" id="username"></h3>
+        <h3>Password : <input type="form" id="password"></h3>
+      </div>
+    </div>
+    <div id="login-menu-footer">
+      <div id="staff-login"><a href="staff.html">Staff login</a></div>
+      <button id="login-menu-button" onclick="loginOnClick()">Login</button>
+    </div>
+  </div>
+  <header>
+    <div id="logo">
+      <h1>Midnight Car Club</h1>
+    </div>
+    <div class="header-right">
+      <button class="login" onclick="popupOnClick()">Login</button>
+    </div>
+  </header>
+  </div>
+  <div id="menu">
+    <div id="menu-bar" onclick="menuOnClick()">
+      <div id="bar1" class="bar"></div>
+      <div id="bar2" class="bar"></div>
+      <div id="bar3" class="bar"></div>
+    </div>
+    <nav class="nav" id="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="merch.html">Merchandise</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a class="active" href="contact.html">Contact Us</a></li>
+        <li><a href="join.html">Join Us</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="menu-bg" id="menu-bg"></div>
+  <div class="contact">
+    <h2>Contact us</h2>
+    <h4>Drop us a line, or give us a heads up if you're interested in visiting us.</h4>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <div class="contact-container">
+      <div class="contact-box" id="emailus" data-hover="hover" data-hit="hit1"
+        onclick="document.getElementById('id01').style.display='block'" style="width:50%;">
+        <p>Email Us</p>
+        <h5>For any other inquiries please email us</h5>
+      </div>
+
+      <div class="contact-box" id="call" data-hover="hover" data-hit="hit1" style="width:50%;">
+        <p>Call or Text Us</p>
+        <a href="https://web.whatsapp.com/" class="fa fa-whatsapp"> 018-6664227</a>
+      </div>
+    </div>
+
+    <div id="id01" class="question">
+
+      <form class="question-content animate" action="/action_page.php" method="post">
+        <div class="imgemail">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close"
+            title="Close question">&times;</span>
         </div>
-        <div id="login-menu-body">
-          <div id="form">
-            <h3>Username : <input type="form" id="username"></h3>
-            <h3>Password : <input type="form" id="password"></h3>
-          </div>
+
+        <div class="email">
+          <label for="uemail"><b>Email</b></label>
+          <input type="text" placeholder="Enter email" name="uemail" required>
+
+          <label for="msg"><b>Question</b></label>
+          <input type="text" placeholder="Your Message" name="msg" required>
+
+          <button type="send">Send</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
         </div>
-        <div id="login-menu-footer">
-          <div id="staff-login"><a href="staff.html">Staff login</a></div>
-          <button id="login-menu-button" onclick="loginOnClick()">Login</button>
-      </div>
-      </div>
-        <header>
-            <div id="logo">
-                <h1>Midnight Car Club</h1>
-            </div>
-            <div class="header-right">
-                <button class="login" onclick="popupOnClick()">Login</button>
-            </div>
-        </header>
-      </div>
-        <div id="menu">
-            <div id="menu-bar" onclick="menuOnClick()">
-              <div id="bar1" class="bar"></div>
-              <div id="bar2" class="bar"></div>
-              <div id="bar3" class="bar"></div>
-            </div>
-            <nav class="nav" id="nav">
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="merch.html">Merchandise</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a class="active" href="contact.html">Contact Us</a></li>
-                <li><a href="join.html">Join Us</a></li>
-              </ul>
-            </nav> 
-          </div>
-        <div class="menu-bg" id="menu-bg"></div>
-        <div class="contact">
-          <h2>Contact us</h2>
-          <h4>Drop us a line, or give us a heads up if you're interested in visiting us.</h4>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-         
 
-          <div class="contact-container">
-            <div class="contact-box" id="emailus" data-hover="hover" data-hit="hit1" onclick="document.getElementById('id01').style.display='block'" style="width:50%;">
-                <p>Email Us</p>
-                <h5>For any other inquiries please email us</h5>
-            </div>
+        <div class="cancel">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'"
+            class="cancelbtn">Cancel</button>
+          <span class="psw"> <a href="#">login</a></span>
+        </div>
+      </form>
+    </div>
+    <div class="ig">
+      <a href="https://www.instagram.com/jjoeye_e/?hl=en" class="fa fa-instagram"></a>
+    </div>
+    <script>
 
-            <div class="contact-box" id="call" data-hover="hover" data-hit="hit1" style="width:50%;">
-              <p>Call or Text Us</p>
-              <a href="https://web.whatsapp.com/" class="fa fa-whatsapp"> 018-6664227</a>
-          </div>
+      var question = document.getElementById('id01');
 
-             <div class="insta-box" id="insta" data-hover="hover" data-hit="hit1" style="width:50%;">
-              <p>Follow Midnight Car Club</p>
-              <a href="https://www.instagram.com/jjoeye_e/?hl=en" class="fa fa-instagram"> midnightcc</a>
-          </div>
-      </div>
-          
-          <div id="id01" class="question">
-            
-            <form class="question-content animate" action="/action_page.php" method="post">
-              <div class="imgemail">
-                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close question">&times;</span>
-              </div>
-          
-              <div class="email">
-                <label for="uemail"><b>Email</b></label>
-                <input type="text" placeholder="Enter email" name="uemail" required>
-          
-                <label for="msg"><b>Question</b></label>
-                <input type="text" placeholder="Your Message" name="msg" required>
-                  
-                <button type="send">Send</button>
-                <label>
-                  <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
-              </div>
-          
-              <div class="cancel" >
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                <span class="psw"> <a href="#">login</a></span>
-              </div>
-            </form>
-          </div>
+      window.onclick = function (event) {
+        if (event.target == question) {
+          question.style.display = "none";
+        }
+      }
+    </script>
+</body>
 
-          <script>
-
-          var question =document.getElementById('id01');
-          
-          window.onclick = function(event) {
-              if (event.target == question) {
-                  question.style.display = "none";
-              }
-          }
-      </script>
-    </body>
 </html>

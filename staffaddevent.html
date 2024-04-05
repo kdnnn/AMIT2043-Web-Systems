@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <title>staff admin</title>
+</header>
+
+<head>
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="staff1.css">
+  <script src="stafflogin.js"></script>
+  <script src="index.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+  <header>
+    <div id="logo">
+      <h1>Staff Admin</h1>
+    </div>
+    <div class="header-right">
+      <button id="logout" onclick="handleLogout()">Log Out</button>
+    </div>
+  </header>
+  </div>
+
+
+  </div>
+  <div id="menu">
+    <div id="menu-bar" onclick="menuOnClick()">
+      <div id="bar1" class="bar"></div>
+      <div id="bar2" class="bar"></div>
+      <div id="bar3" class="bar"></div>
+    </div>
+    <nav class="nav" id="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="merch.html">Merchandise</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="join.html">Join Us</a></li>
+        <li><a class="active" href="staff.html">Staff </a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="menu-bg" id="menu-bg"></div>
+  <!--Add content here :)-->
+  <div class="content">
+    <form id="eventForm">
+      <h1 style="text-align: center;"><u>Add Event</u></h1>
+      <label for="event_name">Event Name:</label>
+      <input type="text" id="event_name" name="event_name" required><br><br>
+
+      <label for="event_sdate">Event start Date:</label>
+      <input type="date" id="event_sdate" name="event_sdate" required><br><br>
+
+        <label for="event_edate">Event End Date:</label>
+        <input type="date" id="event_edate" name="event_edate" required><br><br>
+
+      <label for="event_time">Event Time:</label>
+      <input type="time" id="event_stime" name="event_time" required><br><br>
+
+      <label for="event_etime">Event End Time:</label>
+      <input type="time" id="event_etime" name="event_etime" required><br><br>
+
+      <label for="event_location">Event Location:</label>
+      <input type="text" id="event_location" name="event_location" required><br><br>
+
+      <label for="event_image">Event Image:</label>
+      <input type="file" id="event_image" name="event_image" required><br><br>
+
+      <label for="event_price">Event Ticket Price(RM):</label>
+      <input type="number" id="event_price" name="event_price" required><br><br>
+
+      <label for="event_carseat">Event Car Seat:</label>
+      <input type="number" id="event_carseat" name="event_carseat" required><br><br>
+
+      <label for="event_ticketqty">Event Ticket Quantity:</label>
+      <input type="number" id="event_ticketqty" name="event_ticketqty" required><br><br>
+
+      <label for="event_description">Event Description:</label><br>
+      <textarea id="event_description" name="event_description" rows="4" cols="50" required></textarea><br><br>
+
+      <button type="submit" class="addbtn" onclick="confirmAddEvent()">Add Event</button>
+      <button type="button" onclick="clearForm()" class="clearbtn">Clear</button>
+      
+      
+    </form>
+   
+
+
+
+
+  
+
+<script>
+   function confirmAddEvent() {
+      const event_name = document.getElementById("event_name").value;
+      const event_sdate = document.getElementById("event_sdate").value;
+      const event_edate =document.getElementById("event_edate").value;
+      const event_location =document.getElementById("event_location").value;
+      const event_image =document.getElementById("event_image").value;
+      const event_price =document.getElementById("event_price").value;
+      const event_carseat =document.getElementById("event_carseat").value;
+      const event_description =document.getElementById("event_description").value;
+      const event_time =document.getElementById("event_stime").value;
+      const event_etime =document.getElementById("event_etime").value;
+      const event_ticketqty =document.getElementById("event_ticketqty").value;
+
+
+
+      if (event_name !== "" || event_sdate !== "" || event_edate!=="" || event_location!=="" || event_image!=="" ||event_price!=="" ||event_carseat!=="" ||event_description!=="" ||event_time!=="" ||event_etime!=="" ||event_ticketqty!=="") {
+        if (confirm("Are you sure you want to add this event?")) {
+          alert("Event added successfully!");
+        } else {
+          alert("Event addition canceled.");
+        }
+      } else {
+        alert("Please fill in all required fields.");
+      }
+    }
+
+ 
+      function clearForm() {
+      document.getElementById("eventForm").reset();
+    }
+    //logout function
+    function handleLogout() {
+      var confirmLogout = confirm('Are you sure you want to log out?');
+      if (confirmLogout) {
+        alert('Log out successful');
+        window.location.href = "index.html";
+
+      } else {
+        console.log('Logout cancelled by the user.');
+      }
+    }
+    
+
+ 
+  
+
+
+
+
+  </script>
+
+
+</body>
+
+</html>

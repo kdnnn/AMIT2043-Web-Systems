@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <title>staff admin</title>
+</header>
+
+<head>
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="staff1.css">
+  <script src="stafflogin.js"></script>
+  <script src="index.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+  <header>
+    <div id="logo">
+      <h1>Staff Admin</h1>
+    </div>
+    <div class="header-right">
+      <button id="logout" onclick="handleLogout()">Log Out</button>
+    </div>
+  </header>
+  </div>
+
+
+  </div>
+  <div id="menu">
+    <div id="menu-bar" onclick="menuOnClick()">
+      <div id="bar1" class="bar"></div>
+      <div id="bar2" class="bar"></div>
+      <div id="bar3" class="bar"></div>
+    </div>
+    <nav class="nav" id="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="merch.html">Merchandise</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="join.html">Join Us</a></li>
+        <li><a class="active" href="staff.html">Staff </a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="menu-bg" id="menu-bg"></div>
+  <!--Add content here :)-->
+  <div class="search-container">
+    <input type="text" id="searchInput" class="search-input" placeholder="Search for event...">
+    <button onclick="searchEvents()" class="search-button">Search</button>
+    
+  </div>
+  <div class="buttoncontrol">
+    <button class="editbtn" onclick="toggleEdit()">edit</button>
+    <button  class="savebtn" onclick="toggleSave()">Save</button>
+  </div>
+  <!--1-->
+  <div class=" events" id="e1">
+    <img src="https://autoshow.my/wp-content/uploads/2024/01/MAS2024-featured-img.png" alt="carshow" class="img1"
+      width="300" height="355">
+    <p>Event Name:Autoshow2024</p>
+    <p>Event start_Date: 10/06/2024</p>
+    <p>Event End_Date: 13/06/2024</p>
+    <p>Event Start_Time: 10:00</p>
+    <p>Event End_Time: 22:00</p>
+    <p>Event Ticktet_Price:RM20</p>
+    <p>Event TIcket_Quantity:600</p>
+    <p>Event car_seat:399</p>
+    <p>Event Location: (MY Town Mall,level 6) 6,Jalan Cochrane, Seksyen 90, 55100 Kuala Lumpur, Wilayah Persekutuan
+      Kuala Lumpur</p>
+    <p>Event Description: This events include all JDM car form every state and thailand,singapore</p>
+    <button class="deletebtn"  onclick="hideEvent('e1')">delete</button>
+   
+  </div>
+  </div>
+  <!--2-->
+  <div class=" events" id="e2">
+    <img src="https://cdn.dsmcdn.com/ty808/product/media/images/20230402/14/317127067/902404213/1/1_org_zoom.jpg"
+      alt="carshow" class="img1" width="300" height="355">
+    <p>Event Name:Midnight car event</p>
+    <p>Event start_Date: 28/06/2024</p>
+    <p>Event End_Date: 1/07/2024</p>
+    <p>Event Start_Time: 16:00</p>
+    <p>Event End_Time: 02:00</p>
+    <p>Event Ticktet_Price:RM20</p>
+    <p>Event TIcket_Quantity:20000</p>
+    <p>Event car_seat:1099</p>
+    <p>Event Location: (Axiata Arena) L2-E-10, Enterprise 4, Technology Park Malaysia, Lebuhraya Bukit Jalil, Bukit
+      Jalil, 57000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</p>
+    <p>Event Description: -</p>
+
+    <button class="deletebtn"  onclick="hideEvent('e2')">delete</button>
+  
+  </div>
+  </div>
+
+  <!--3-->
+  <div class=" events" id="e3">
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlp30nXXHeEDFpZtGUldPHxyeOHs06oXPect_KZD2lVN3JkcHf0crzVk5zOM6EzYRAFuo&usqp=CAU"
+      alt="carshow" class="img1" width="300" height="355">
+    <p>Event Name:Tokyo Auto Salon2024</p>
+    <p>Event start_Date: 13/06/2024</p>
+    <p>Event End_Date: 16/06/2024</p>
+    <p>Event Start_Time: 10:00</p>
+    <p>Event End_Time: 22:00</p>
+    <p>Event Ticktet_Price:RM25</p>
+    <p>Event TIcket_Quantity:30000</p>
+    <p>Event car_seat:800</p>
+    <p>Event Location: (Plenary Hall, KLCC) 21, Jalan Pinang, Kuala Lumpur, 50450 Kuala Lumpur, Wilayah Persekutuan
+      Kuala Lumpur</p>
+    <p>Event Description: -</p>
+    <button class="deletebtn"  onclick="hideEvent('e3')">delete</button>
+  </div>
+  </div>
+
+  <!--4-->
+  <div class=" events" id="e4">
+    <img src="https://industry.steel-technology.com/event/1705052002-meta.png " alt="carshow" class="img1" width="300"
+      height="370">
+    <p>Event Name:AUTOMEX 2024</p>
+    <p>Event start_Date: 15/05/2024</p>
+    <p>Event End_Date: 18/05/2024</p>
+    <p>Event Start_Time: 10:00</p>
+    <p>Event End_Time: 22:00</p>
+    <p>Event Ticktet_Price:RM29</p>
+    <p>Event TIcket_Quantity:30000</p>
+    <p>Event car_seat:420</p>
+    <p>Event Location:Malaysia International Trade and Exhibition Centre, Kuala Lumpur, Malaysia </p>
+    <p>Event Description: METALTECH & AUTOMEX has played a leading role in the development of Malaysia's metalworking,
+      machinery, robotics, and automation sectors. It is a prominent business event encompassing multiple industries
+      within manufacturing.</p>
+      <button class="deletebtn"  onclick="hideEvent('e4')">delete</button>
+  </div>
+  </div>
+
+  <!--5-->
+  <div class=" events" id="e5">
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRCUi1tL6bM3I4WObqtsWjx6T2nkSCsAbgvezSwydh5Qz2JTbwnogTNxFt-7pVLY_S3C4&usqp=CAU"
+      alt="carshow" class="img1" width="300" height="380">
+    <p>Event Name:INTERNATIONAL AUTOMODIFIED (IAM) KUALA LUMPUR 2024</p>
+    <p>Event start_Date: 10/04/2024</p>
+    <p>Event End_Date: 13/04/2024</p>
+    <p>Event Start_Time: 10:00</p>
+    <p>Event End_Time: 22:00</p>
+    <p>Event Ticktet_Price:RM21</p>
+    <p>Event TIcket_Quantity:10000</p>
+    <p>Event car_seat:</p>
+    <p>Event Location: Kuala Lumpur Convention Centre
+      Kuala Lumpur City Centre, 50088 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia</p>
+    <p>Event Description:International Automodified is the number 1 car show franchise in the region. It aims to provide
+      a high quality and professional platform for automotive hobbyists/enthusiasts, automotive products manufacturers,
+      dealers and automotive service providers to converge and exchange the latest trends and technology in the
+      automotive dress-up and tuning industry.</p>
+      <button class="deletebtn"  onclick="hideEvent('e5')">delete</button>
+  </div>
+  </div>
+
+  <!--6-->
+  <div class=" events" id="e6">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEPIFUD21slWzeC_pmwdAcRByJb54qVf0ySudez0x8fQ&s"
+      alt="carshow" class="img1" width="300" height="380">
+    <p>Event Name:EVM ASIA 2024 EXPO</p>
+    <p>Event start_Date: 19/11/2024</p>
+    <p>Event End_Date: 21/11/024</p>
+    <p>Event Start_Time: 10:00</p>
+    <p>Event End_Time: 16:00</p>
+    <p>Event Ticktet_Price:RM15</p>
+    <p>Event TIcket_Quantity:25000</p>
+    <p>Event car_seat:200</p>
+    <p>Event Location: Malaysia International Trade and Exhibition Centre(MITEC)
+      Kuala Lumpur, Malaysia</p>
+    <p>Event Description: EVM ASIA 2024 - the Regions No.1 Exhibition on EV & Hybrid Vehicles, Mobility, Manufacturing
+      Technology & Auto Parts will return to MITEC, Kuala Lumpur from 19-21 November 2024 for its 3rd edition under the
+      theme: 'The Future of SUSTAINABLE Mobility'. It has reaffirmed its position as the leading B2B event in the region
+      on E-Mobility and its ecosystem.
+    </p>
+    <button class="deletebtn"  onclick="hideEvent('e6')">delete</button>
+  </div>
+  </div>
+
+
+
+
+
+  <script>
+    function searchEvents() {
+      var input, filter, events, event, i, txtValue;
+      input = document.getElementById('searchInput');
+      filter = input.value.toUpperCase();
+      events = document.getElementsByClassName('events');
+
+      for (i = 0; i < events.length; i++) {
+        event = events[i];
+        txtValue = event.textContent || event.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          event.style.display = '';
+        } else {
+          event.style.display = 'none';
+        }
+      }
+    }
+
+    var editMode = false;
+
+function toggleEdit() {
+    var events = document.getElementsByClassName('events');
+
+    for (var i = 0; i < events.length; i++) {
+        var paragraphs = events[i].getElementsByTagName('p');
+
+        for (var j = 0; j < paragraphs.length; j++) {
+            if (editMode) {
+                var text = paragraphs[j].textContent;
+                var index = text.indexOf(':');
+
+                if (index !== -1) {
+                    var editableText = text.substring(index + 1);
+                    paragraphs[j].innerHTML = text.substring(0, index + 1) + '<span contenteditable="true" style="border: 1px solid #0059ff;">' + editableText + '</span>';
+                }
+            } else {
+                var spanElement = paragraphs[j].querySelector('span');
+                if (spanElement) {
+                    paragraphs[j].innerHTML = paragraphs[j].textContent.split(':')[0] + ': ' + spanElement.textContent;
+                }
+            }
+        }
+    }
+
+    editMode = !editMode; // Toggle edit mode
+}
+
+function toggleSave() {
+    var events = document.getElementsByClassName('events');
+
+    for (var i = 0; i < events.length; i++) {
+        var paragraphs = events[i].getElementsByTagName('p');
+
+        for (var j = 0; j < paragraphs.length; j++) {
+            var spanElement = paragraphs[j].querySelector('span');
+            if (spanElement) {
+                paragraphs[j].innerHTML = paragraphs[j].textContent.split(':')[0] + ': ' + spanElement.textContent;
+            }
+        }
+    }
+
+    // Add save functionality here
+    // You can send the edited content to the server using AJAX or save it locally
+
+    alert('Changes saved successfully!');
+}
+
+function hideEvent(eventId) {
+    var eventToHide = document.getElementById(eventId);
+    
+    if (eventToHide) {
+        eventToHide.style.display = 'none';
+        alert('Event with ID ' + eventId + ' has been successfully delete.'); // Hide the event content
+    } else {
+        alert('Event ID not found. Please check the ID.');
+    }
+}
+//logout function
+function handleLogout() {
+      var confirmLogout = confirm('Are you sure you want to log out?');
+      if (confirmLogout) {
+        alert('Log out successful');
+        window.location.href = "index.html";
+
+      } else {
+        console.log('Logout cancelled by the user.');
+      }
+    }
+
+  </script>
+
+
+</body>
+
+</html>

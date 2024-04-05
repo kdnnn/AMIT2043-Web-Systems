@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <title>staff admin</title>
+</header>
+
+<head>
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="staff1.css">
+  <script src="index.js"></script>
+  <script src="stafflogin.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+  <header>
+    <div id="logo">
+      <h1>Staff Admin</h1>
+    </div>
+    <div class="header-right">
+      <button id="logout" onclick="handleLogout()">Log Out</button>
+    </div>
+  </header>
+  </div>
+
+
+  </div>
+  <div id="menu">
+    <div id="menu-bar" onclick="menuOnClick()">
+      <div id="bar1" class="bar"></div>
+      <div id="bar2" class="bar"></div>
+      <div id="bar3" class="bar"></div>
+    </div>
+    <nav class="nav" id="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="merch.html">Merchandise</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="join.html">Join Us</a></li>
+        <li><a class="active" href="staff.html">Staff </a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="menu-bg" id="menu-bg"></div>
+  <!--Add content here :)-->
+  <div class="wel">
+    <h1 style="text-align: center;">WELCOME STAFF</h1>
+  </div>
+
+  <div class="grid-container">
+    <div class="grid-item" id="item1" onclick="gotoaddevent()">
+      <h2>Add new events</h2>
+    </div>
+
+    <div class="grid-item" id="item2" onclick="gotoviewevent()">
+      <h2>view all events</h2>
+      
+    </div>
+    
+    <div class="grid-item" id="item5" onclick="gotostaffdetails()">
+      <h2>Staffdetails</h2>
+     
+    </div>
+   
+  </div>
+  <div class="process">
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    function gotoaddevent() {
+      window.location.href = "staffaddevent.html"; 
+    }
+    function gotoviewevent() {
+      window.location.href = "staffviewevent.html"; 
+    }
+
+    function gotostaffdetails(){
+      window.location.href="staffdetails.html"
+    }
+    function clearForm() {
+      document.getElementById("eventForm").reset();
+      document.getElementById("editForm").reset();
+    }
+    
+    
+    
+    
+    </script>
+
+
+
+
+</body>
+
+</html>

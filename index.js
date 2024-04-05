@@ -7,3 +7,4 @@ function menuOnClick() {
 function popupOnClick() {
   document.getElementById("login-menu").classList.toggle("login-popup");
 }
+

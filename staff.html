@@ -1,55 +1,157 @@
 <!DOCTYPE html>
 <html>
-    <header>
-        <title>Staff Login</title>
-    </header>
-    <head>  
-        <link rel="stylesheet" href="layout.css">
-        <script src="index.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-      <div id="login-menu">
-        <div id="login-menu-header">
-          <h1 id="member-login">Member Login</h1>
-        </div>
-        <div id="login-menu-body">
-          <div id="form">
-            <h3>Username : <input type="form" id="username"></h3>
-            <h3>Password : <input type="form" id="password"></h3>
-          </div>
-        </div>
-        <div id="login-menu-footer">
-          <div id="staff-login"><a href="staff.html">Staff login</a></div>
-          <button id="login-menu-button" onclick="loginOnClick()">Login</button>
+<header>
+  <title>Staff login</title>
+</header>
+
+<head>
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="staff1.css">
+ 
+  <script src="index.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+  <header>
+    <div id="logo">
+      <h1>Midnight Car Club(staff login)</h1>
+    </div>
+  </header>
+  </div>
+  <div id="menu">
+    <div id="menu-bar" onclick="menuOnClick()">
+      <div id="bar1" class="bar"></div>
+      <div id="bar2" class="bar"></div>
+      <div id="bar3" class="bar"></div>
+    </div>
+    <nav class="nav" id="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="merch.html">Merchandise</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="join.html">Join Us</a></li>
+        <li><a class="active" href="staff.html">Staff </a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="menu-bg" id="menu-bg"></div>
+  <!--Add content here :)-->
+  <style>
+    button {
+      background-color: #04AA6D;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+  <div id="login-form">
+    <h2>Staff Login</h2>
+
+    <form action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <img src="https://media.istockphoto.com/id/1127160304/vector/crowd-of-people-icon.
+                  jpg?s=612x612&w=0&k=20&c=fX-q2OnWKh4xGwCTfy4l-pPZ6vmKqYG_uOwzo7KdzXc=" alt="stafflogo"
+          class="avatar">
       </div>
+
+      <div class="container">
+        <label for="uname"><b>Username:</b></label>
+        <input type="text" id="username" placeholder="Enter Username" required>
+
+        <label for="psw"><b>Password:</b></label>
+        <input type="password" id="password" placeholder="Enter Password" required>
+
+        <button type="submit" id="loginButton">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
       </div>
-        <header>
-            <div id="logo">
-                <h1>Midnight Car Club</h1>
-            </div>
-            <div class="header-right">
-                <button class="login" onclick="popupOnClick()">Login</button>
-            </div>
-        </header>
+
+      <div class="container">
+        <button type="button" class="cancelbtn">Clear</button>
+        <span class="psw">Forgot <a href="#" id="fgtpsw">password?</a></span>
       </div>
-        <div id="menu">
-            <div id="menu-bar" onclick="menuOnClick()">
-              <div id="bar1" class="bar"></div>
-              <div id="bar2" class="bar"></div>
-              <div id="bar3" class="bar"></div>
-            </div>
-            <nav class="nav" id="nav">
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="merch.html">Merchandise</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="join.html">Join Us</a></li>
-              </ul>
-            </nav> 
-          </div>
-        <div class="menu-bg" id="menu-bg"></div>
-                <!--Add content here :)-->
-    </body>
+    </form>
+  </div>
+
+
+
+
+
+
+  <script>
+    //login function
+    document.addEventListener('DOMContentLoaded', function () {
+
+      document.getElementById('loginButton').addEventListener('click', function (event) {
+
+        event.preventDefault();
+
+
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+
+        if (username === "user" && password === "pass") {
+          console.log("Login successful");
+
+          window.location.href = 'staffadmin.html';
+        } else {
+          console.log("Login failed");
+
+          alert("Incorrect username or password. Please try again.");
+        }
+      });
+    });
+
+    //clear function
+    document.addEventListener('DOMContentLoaded', function () {
+
+      var cancelButton = document.querySelector('.cancelbtn');
+
+
+      cancelButton.addEventListener('click', function () {
+
+        document.getElementById('username').value = '';
+        document.getElementById('password').value = '';
+      });
+    });
+
+    //forget password
+    document.addEventListener('DOMContentLoaded', function () {
+
+      var forgotPasswordLink = document.getElementById('fgtpsw');
+
+      forgotPasswordLink.addEventListener('click', function () {
+        alert('please contact our HR department to get the new password!');
+      });
+    });
+
+
+
+    //js for stffadmin.html
+    //logout function
+    function handleLogout() {
+      var confirmLogout = confirm('Are you sure you want to log out?');
+      if (confirmLogout) {
+        alert('Log out successful');
+        window.location.href = "index.html";
+
+      } else {
+        console.log('Logout cancelled by the user.');
+      }
+    }
+
+
+
+  </script>
+</body>
+
 </html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <title>staff Details</title>
+</header>
+
+<head>
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="staff1.css">
+  <script src="index.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+  <header>
+    <div id="logo">
+      <h1>Staff Admin</h1>
+    </div>
+    <div class="header-right">
+      <button id="logout" onclick="handleLogout()">Log Out</button>
+    </div>
+  </header>
+  </div>
+
+
+  </div>
+  <div id="menu">
+    <div id="menu-bar" onclick="menuOnClick()">
+      <div id="bar1" class="bar"></div>
+      <div id="bar2" class="bar"></div>
+      <div id="bar3" class="bar"></div>
+    </div>
+    <nav class="nav" id="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="merch.html">Merchandise</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="join.html">Join Us</a></li>
+        <li><a class="active" href="staff.html">Staff </a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="menu-bg" id="menu-bg"></div>
+
+<div class="container1">
+  <span class="staff" id="staff1"><img src="staff1.jpg"  height="500px" width="350px"></span>
+  <div class="staff-member">
+    <h2>QAYDAN QUEK QYUN THENG</h2>
+    <p>Position: CEO COMPANY</p>
+    <p>Email: qaydan1122@gmail.com</p>
+    <p>P/N:011-11619380</p>
+  </div>
+
+
+  <span class="staff" id="staff2"><img src="staff2.jpg"  height="500px" width="350px"></span>
+  <div class="staff-member">
+    <h2>QAYDAN QUEK QYUN THENG</h2>
+    <p>Position: CEO COMPANY</p>
+    <p>Email: qaydan1122@gmail.com</p>
+    <p>P/N:011-11619380</p>
+  </div>
+  <span class="staff" id="staff3"><img src="staff3.jpg"  height="500px" width="350px"></span>
+  <div class="staff-member">
+    <h2>ENG JOE YEE</h2>
+    <p>Position: BUSINESS MANAGER</p>
+    <p>Email: john.doe@example.com</p>
+    <p>P/N:018-6664227</p>
+  </div>
+  <span class="staff" id="staff4"><img src="staff4.jpg"  height="500px" width="350px"></span>
+  <div class="staff-member">
+    <h2>NG XIN YUAN</h2>
+    <p>Position: HR MANAGER</p>
+    <p>Email: jane.smith@example.com</p>
+    <p>P/N:011-59873292</p>
+  </div>
+</div>
+
+
+
+
+      
+      
+     
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<script>
+
+
+    //logout function
+function handleLogout() {
+      var confirmLogout = confirm('Are you sure you want to log out?');
+      if (confirmLogout) {
+        alert('Log out successful');
+        window.location.href = "index.html";
+
+      } else {
+        console.log('Logout cancelled by the user.');
+      }
+    }
+</script>
+
+</body>
+
+</html>
